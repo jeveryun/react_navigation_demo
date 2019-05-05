@@ -4,7 +4,7 @@
  * @description:  Page1.js
  */
 import React, {Component} from 'react';
-import {View, Text, StyleSheet,Button,TextInput} from 'react-native';
+import {View, Text, StyleSheet, Button, TextInput} from 'react-native';
 
 export default class Page3 extends Component {
     render() {
@@ -12,7 +12,7 @@ export default class Page3 extends Component {
         console.log(navigation)
         const {state, setParams} = navigation;
         const {params} = state;
-        const showText = params.mode === 'edit'?'正在编辑':'编辑完成';
+        const showText = params.mode === 'edit' ? '正在编辑' : '编辑完成';
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
@@ -31,6 +31,18 @@ export default class Page3 extends Component {
                         setParams({title: text})
                     }}
                 />
+
+                <Button
+                    title={'改变主题'}
+                    onPress={() => {
+                        navigation.setParams({
+                            theme: {
+                                tintColor: 'pink',
+                                updateTime: new Date().getTime()
+                            }
+                        })
+                    }}
+                />
             </View>
         )
     }
@@ -39,11 +51,11 @@ export default class Page3 extends Component {
 
 const styles = StyleSheet.create({
     input: {
-        width:360,
-        height:50,
-        borderWidth:1,
-        marginTop:20,
-        borderColor:'black'
+        width: 360,
+        height: 50,
+        borderWidth: 1,
+        marginTop: 20,
+        borderColor: 'black'
     },
     container: {
         flex: 1,

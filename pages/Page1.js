@@ -4,7 +4,7 @@
  * @description:  Page1.js
  */
 import React, {Component} from 'react';
-import {View, Text, StyleSheet,Button} from 'react-native';
+import {View, Text, StyleSheet, Button} from 'react-native';
 
 export default class Page1 extends Component {
     render() {
@@ -18,6 +18,23 @@ export default class Page1 extends Component {
                     title={'Go Back'}
                     onPress={() => {
                         navigation.goBack();
+                    }}
+                />
+                <Button
+                    title={'Go Page2'}
+                    onPress={() => {
+                        navigation.navigate('Page2');
+                    }}
+                />
+                <Button
+                    title={'改变主题'}
+                    onPress={() => {
+                        navigation.setParams({
+                            theme: {
+                                tintColor: 'orange',
+                                updateTime: new Date().getTime()
+                            }
+                        })
                     }}
                 />
             </View>
