@@ -20,6 +20,18 @@ export default class HomePage extends Component{
                         navigation.navigate('FlatListPage')
                     }}
                 ></Button>
+                <Button
+                    title={'Go To SwipeableFlatList'}
+                    onPress={() => {
+                        navigation.navigate('SwipeableFlatListPage')
+                    }}
+                ></Button>
+                <Button
+                    title={'Go To SectionList'}
+                    onPress={() => {
+                        navigation.navigate('SectionListPage')
+                    }}
+                ></Button>
             </View>
         )
     }
