@@ -4,21 +4,18 @@
  * @description:  HomePage.js
  */
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button} from 'react-native';
 
 
 export default class HomePage extends Component {
     static navigationOptions = {
-        title: "Home",
+        title: "Navigation",
         headerBackTitle:'返回哈哈'
     }
     render() {
         const {navigation} = this.props;
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
                 <Button
                     title={"Go to page1"}
                     onPress={() => {
